@@ -5,7 +5,6 @@ require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 3000
 app.set("PORT", PORT)
-const allowedDomains = ['dottt.me', 'ai.dottt.me', 'dotttme.com'];
 
 
 app.get('/health', (req, res) => {
@@ -21,12 +20,7 @@ const isValidUrl = (url) => {
         return false;
     }
 
-    try {
-        const { hostname } = new URL(url);
-        return allowedDomains.some(domain => hostname.endsWith(domain));
-    } catch (err) {
-        return false;
-    }
+    return url
 };
 
 

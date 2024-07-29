@@ -27,8 +27,7 @@ This is a simple Express.js application that generates and serves QR codes based
 3. Create a `.env` file and set your environment variables:
     ```plaintext
     PORT=3000
-    ALLOWED_DOMAINS=dottt.me,ai.dottt.me,dotttme.com
-    ```
+   
 
 4. Start the application:
     ```bash
